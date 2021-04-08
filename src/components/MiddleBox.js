@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { CaretLeftFill, PeopleCircle } from 'react-bootstrap-icons';
+import { CaretLeftFill, PersonCircle, Plus } from 'react-bootstrap-icons';
 
 export class MiddleBox extends Component {
     render(){
@@ -25,16 +25,20 @@ export class MiddleBox extends Component {
             height: "123px",
             width: "103%",
             borderRadius: "0 30px 20px 20px",
-            marginTop: "130%",
+            marginTop: "120%",
             marginLeft: "-4px",
             backgroundColor: "#1d99ff"
         }
         return(
             <div style={middleBoxStyle}>
-            <CaretLeftFill className="bi bi-caret-left" color="blue" backgroundColor="blue" style={{position: "fixed", marginTop: "10px", marginLeft: "10px"}}/>
-            <PeopleCircle/>
+            <CaretLeftFill className="bi bi-caret-left" color="blue" style={{position: "fixed", marginTop: "10px", marginLeft: "10px"}}/>
+            <PersonCircle className="bi bi-person-circle" color="blue" style={{marginLeft: "85%", marginTop: "10px"}}/>
+            <h3  style={{position: "fixed", color: "#9aacbd", marginTop: "4%", marginLeft: "45px"}}><b>Daily Task</b></h3>
+            <Plus color="blue" style={{position: "fixed", height: "35px", width: "30px", marginTop: "5%", marginLeft: "-45px"}} className="bi bi-plus"/>
                 <div style={innerBox}>
                     <div style={innermostBox}>
+                        <h3 style={{position: "fixed", color: "white", marginLeft: "2%", marginTop: "1%"}}>Tense Tuesday</h3>
+                        <Plus color="white" style={{position: "fixed", height: "35px", width: "30px", marginTop: "1%", marginLeft: "11.5%"}} className="bi bi-plus"/>
                     </div>
                 </div>
             </div>

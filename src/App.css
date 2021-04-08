@@ -1,3 +1,9 @@
 .color {
     background-color: red;
 }
+
+@media (min-height: 680px), screen and (orientation: portrait) {
+    style {
+        width: 50%;
+    }
+}

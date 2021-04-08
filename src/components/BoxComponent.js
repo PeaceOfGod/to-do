@@ -1,14 +1,12 @@
 import React, { Component } from "react";
-import MyClock from "./MyClock";
+//import MyClock from './MyClock';
+import PeaceClock from './PeaceClock';
 import { List, PlusSquare } from 'react-bootstrap-icons';
 
-export class BoxComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      date: new Date(),
-    };
-  }
+export class BoxComponent extends Component {  
+  state = {
+    date: new Date(),
+  };
 
   componentDidMount() {
     setInterval(() => this.setState({ date: new Date() }), 1000);
@@ -48,20 +46,28 @@ export class BoxComponent extends Component {
       marginLeft: "11%",
       backgroundColor: "#1d99ff",
     };
+
+    function handleClick () {
+      
+    }
+
+    function addTask () {
+      
+    }
     return (
       <div style={myStyle}>
-      <List className="bi bi-list" color="blue" backgroundColor="blue" style={{position: "fixed", marginTop: "10px", marginLeft: "10px"}}/>
-        <MyClock
-          value={this.state.date}
-        />
+      <List onClick={handleClick()} className="bi bi-list" color="blue" style={{position: "fixed", marginTop: "10px", marginLeft: "10px"}}/>        
         <h2 style={{position: "fixed", marginTop: "2.5%", color: "#cfd8e0"}}>Good afternoon,</h2>
         <h4 style={{position: "fixed", marginTop: "4%", color: "#71bcfb"}}>Robert Anderson</h4>
+        <div className="Clock" style={{position: "fixed", marginLeft: "3.5%", marginTop: "6%"}}>
+            <PeaceClock size={150} timeFormat="24hour" hourFormat="standard" />
+        </div>
         <h3 style={{position: "fixed", marginTop: "15%", marginLeft: "15px", color: "lightblue"}}> <b>Tasks</b>     Lists</h3>
-        <PlusSquare className="bi bi-plus-square" color="red" style={{height: "25px", width: "30px", marginTop: "15%", marginLeft: "12%", position: "fixed"}}/>
+        <PlusSquare onClick={addTask()} className="bi bi-plus-square" color="red" style={{height: "25px", width: "30px", marginTop: "15%", marginLeft: "12%", position: "fixed"}}/>
         <div style={{position: "fixed"}}>
             <div style={innerBox}></div>
             <div style={innermostBox}></div>
-        </div>
+        </div>        
       </div>
     );
   }
