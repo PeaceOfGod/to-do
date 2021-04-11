@@ -43,27 +43,30 @@ export class MiddleBox extends Component {
             backgroundColor: "#f1f4f6"
         },
         innerBox: {
-            border: "#ffffff solid",
-            height: "400px",
-            width: "auto",
-            textColor: "blue",
-            borderRadius: "0 30px 20px 20px",
-            marginTop: "20%",
-            backgroundColor: "#ffffff"
+          border: "#ffffff solid",
+          height: "400px",
+          width: "auto",
+          color: "#bbc7d2",
+          borderRadius: "0 30px 20px 20px",
+          marginTop: "20%",
+          backgroundColor: "#ffffff"
         },
         innermostBox: {
-            border: "#1d99ff",
-            height: "123px",
-            width: "103%",
-            borderRadius: "0 30px 20px 20px",
-            marginTop: "25%",
-            marginLeft: "-4px",
-            backgroundColor: "#1d99ff"
+          position: 'fixed',
+          border: "#1d99ff",
+          height: "123px",
+          width: "15%",
+          borderRadius: "0 30px 20px 20px",
+          marginTop: "7.5%",
+          marginLeft: "-2px",
+          backgroundColor: "#1d99ff",
+          color: 'white'
         }
       }
     render(){
         const { tasks } = this.state;
-    const smallTasks = tasks.slice(0, 3)
+    const smallTasks = tasks.slice(0, 2)
+    const littleTasks = tasks.slice(0, 1)
 
     console.log("Tasks...", tasks);
 
@@ -76,10 +79,11 @@ export class MiddleBox extends Component {
             <h3  style={{position: "fixed", color: "#9aacbd", marginTop: "4%", marginLeft: "45px"}}><b>Daily Task</b></h3>
             <Plus color="#1d99ff" style={{position: "fixed", height: "35px", width: "30px", marginTop: "5%", marginLeft: "-45px"}} className="bi bi-plus"/>
                 <div style={innerBox}>
-                {tasks.length > 0 && smallTasks.map((elem) => <Data item={elem} />)}
+                {tasks.length > 0 && smallTasks.map((elem) => <Data item={elem}/>)}
                     <div style={innermostBox}>
                         <h3 style={{position: "fixed", color: "white", marginLeft: "2%", marginTop: "1%"}}>Tense Tuesday</h3>
                         <Plus color="white" style={{position: "fixed", height: "35px", width: "30px", marginTop: "1%", marginLeft: "11.5%"}} className="bi bi-plus"/>
+                        {tasks.length > 0 && littleTasks.map((elem) => <Data item={elem}/>)}
                     </div>
                 </div>
             </div>

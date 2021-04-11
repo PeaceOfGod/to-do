@@ -52,7 +52,7 @@ export class LastBox extends Component {
       backgroundColor: "#ffffff",
     },
     innermostBox: {
-        position: "fixed",
+      position: "fixed",
       border: "#1d99ff",
       height: "410px",
       width: "15.1%",
@@ -61,6 +61,7 @@ export class LastBox extends Component {
       marginLeft: "-3.1px",
       marginBottom: "15%",
       backgroundColor: "#1d99ff",
+      color: 'white'
     },
   };
 

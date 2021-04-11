@@ -9,7 +9,6 @@ export default class Data extends Component {
         style={{
           marginTop: "20%",
           marginLeft: "8%",
-          color: "white",
 	  display: "block"
         }}
       >
@@ -18,7 +17,7 @@ export default class Data extends Component {
           type="checkbox"
           value=""
           id="flexCheckDefault"
-          style={{marginTop: "", marginRight: "10px" }}
+          style={{marginBottom: "-10px", marginRight: "10px" }}
         ></input>
         <label className="form-check-label" htmlFor="flexCheckDefault">
           {name}

@@ -57,7 +57,8 @@ export class BoxComponent extends Component {
       marginTop: "17%",
       marginLeft: "10px",
       backgroundColor: "#ffffff",
-      color: 'blue'
+      color: '#bbc7d2'
+      
     },
   
     innermostBox: {
@@ -69,7 +70,8 @@ export class BoxComponent extends Component {
       boxShadow: "1px 10px #e0e8ef",
       marginTop: "17.3%",
       marginLeft: "11%",
-      backgroundColor: "#1d99ff",      
+      backgroundColor: "#1d99ff",  
+      color: 'white'    
     }
   }
    
@@ -98,7 +100,7 @@ export class BoxComponent extends Component {
         <PlusSquare onClick={addTask()} className="bi bi-plus-square" color="red" style={{height: "25px", width: "30px", marginTop: "15%", marginLeft: "12%", position: "fixed"}}/>
         <div style={{position: "fixed"}}>
             <div style={this.styles.innerBox}>
-              {tasks.length > 0 && smallTasks.map((elem) => <Data item={elem} />)}
+              {tasks.length > 0 && smallTasks.map((elem) => <del><Data item={elem}/></del>)}
             </div>
             <div style={this.styles.innermostBox}>
               {tasks.length > 0 && lastTasks.map((elem) => <Data item={elem} />)}
